@@ -1,0 +1,30 @@
+# Number of devices to run commands on in parallel
+threads: 4
+# Time to sleep in between iterations (seconds)
+sleep_time: 5
+# maximum iterations
+max_iter: 4
+# If true, the results are output to one file per device
+file_output: true
+# If true, the results are printed to the screen
+print_output: true
+# default settings that may be overridden on a per device basis
+default:
+  # commands to run
+  commands:
+    - show int status
+    - show cdp neighbors
+  # cisco_ios or cisco_nxos
+  device_type: cisco_ios
+  port: 22
+# list devices and device specific config
+device_list:
+ - hostname: sbx-nxos-mgmt.cisco.com
+   port: 8181
+   device_type: cisco_nxos
+ - hostname: 64.103.37.14
+   port: 8181
+   device_type: cisco_nxos
+   commands: 
+    - show vlan brief
+    - show ip route
