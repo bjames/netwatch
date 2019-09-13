@@ -61,7 +61,7 @@ device_list:
 
 * The script uses python's multiprocessing library's Pool.map() function. This allows the script to run commands on multiple devices at the same time. As long as you give the script enough threads (one per device), the command execution will start on each device at roughly the same time. In the above configuration, we've told the script it can spawn up to 4 threads, but in this case only 2 threads will actually be used. I've used 16 threads on Linux VM with 2 cores and 4GB of RAM without any performance degradation, but your mileage my vary. 
 
-* You can read more about how I handle concurrency [here](https://neverthenetwork.com/notes/automation_concurrency/) and how I handle script configuration [here](https://neverthenetwork.com/notes/automation_config/).
+You can read more about how I handle concurrency [here](https://neverthenetwork.com/notes/automation_concurrency/) and how I handle script configuration [here](https://neverthenetwork.com/notes/automation_config/).
 
 ## Usage
 
