@@ -21,7 +21,7 @@ def print_output(device_result):
 
 def write_output(device_result):
 
-    with open('netwatch_output_{}'.format(device_result['hostname']), 'a') as outfile:
+    with open('netwatch_output_{}.log'.format(device_result['hostname']), 'a') as outfile:
 
         for i in range(len(device_result['results'])):
 
