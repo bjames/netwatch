@@ -1,12 +1,10 @@
 ## Implementation Goals
 
 1. Execution should take place on each device simultaneously to get a full picture of the network at a single moment in time.
-	* I use the multiprocessing Pool.map() function to add concurrency to my scripts. This is a process I've detailed [here](https://neverthenetwork.com/notes/automation_concurrency/).
 2. The script should be reusable without any modifications to the script itself.
-	* I use YAML configuration files for all my scripts. You can read about how I handle script configuration [here](https://neverthenetwork.com/notes/automation_config/).
 3. The output should include accurate timestamps so we can correlate events across multiple devices.
-4. Output should be written to a file each time the main loop executes, that way if the script dies we don't lose the data up to that point.
-5. The script should be able to complete it's task without any changes to the system it's running on.
+4. Output should be written to a file each time the main loop executes, that way if the script is stopped or dies we don't lose the data up to that point.
+5. The script should be able to complete it's task without using task scheduler or Cron. As these require configuration to take place outside of the script.
 
 
 ## Installation
